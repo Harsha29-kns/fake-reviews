@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: fake-reviews-detection
+    env: python
+    buildCommand: ""
+    startCommand: "python app.py"
+    plan: free
