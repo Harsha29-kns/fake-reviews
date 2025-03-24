@@ -1,0 +1,25 @@
+2025-03-24 19:04:04,029 - INFO - Model and vectorizer loaded successfully!
+2025-03-24 19:04:04,102 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.3.0.243:5000
+2025-03-24 19:04:04,102 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 19:04:15,822 - INFO - Dataset loaded successfully.
+2025-03-24 19:04:15,825 - INFO - Data split into training and testing sets.
+2025-03-24 19:04:15,836 - INFO - Feature extraction completed using TF-IDF.
+2025-03-24 19:04:20,784 - INFO - Best parameters found: {'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+2025-03-24 19:04:20,806 - INFO - Model training completed.
+2025-03-24 19:04:20,806 - INFO - Training time: 4.94809889793396 seconds
+2025-03-24 19:04:20,821 - INFO - Model evaluation completed. Accuracy: 0.95
+2025-03-24 19:04:20,821 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      1.00      0.94        41
+           1       1.00      0.92      0.96        59
+
+    accuracy                           0.95       100
+   macro avg       0.95      0.96      0.95       100
+weighted avg       0.96      0.95      0.95       100
+
+2025-03-24 19:04:20,872 - INFO - Model and vectorizer saved successfully.

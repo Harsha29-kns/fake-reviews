@@ -171,24 +171,23 @@ param_grid = {
     'min_samples_split': [2, 5],
     'min_samples_leaf': [1, 2]
 }
+"""
+#start_time = time.time()
+#grid_search = GridSearchCV(RandomForestClassifier(random_state=42), param_grid, cv=2, n_jobs=-1, verbose=2)  # Reduced number of CV folds
+#grid_search.fit(X_train_tfidf, y_train)
+#end_time = time.time()
 
-start_time = time.time()
-grid_search = GridSearchCV(RandomForestClassifier(random_state=42), param_grid, cv=2, n_jobs=-1, verbose=2)  # Reduced number of CV folds
-grid_search.fit(X_train_tfidf, y_train)
-end_time = time.time()
+#model = grid_search.best_estimator_
+#logging.info(f"Best parameters found: {grid_search.best_params_}")
+#logging.info("Model training completed.")
+#logging.info(f"Training time: {end_time - start_time} seconds")
 
-model = grid_search.best_estimator_
-logging.info(f"Best parameters found: {grid_search.best_params_}")
-logging.info("Model training completed.")
-logging.info(f"Training time: {end_time - start_time} seconds")
-
-y_pred = model.predict(X_test_tfidf)
-
+#y_pred = model.predict(X_test_tfidf)
 accuracy = accuracy_score(y_test, y_pred)
 classification_rep = classification_report(y_test, y_pred)
 logging.info(f"Model evaluation completed. Accuracy: {accuracy}")
 logging.info(f"\nClassification Report:\n{classification_rep}")
-
 joblib.dump(model, 'fake_review_model.pkl')
-joblib.dump(vectorizer, 'tfidf_vectorizer.pkl')
-logging.info("Model and vectorizer saved successfully.")
+#joblib.dump(vectorizer, 'tfidf_vectorizer.pkl')
+#logging.info("Model and vectorizer saved successfully.")
+*/"""
