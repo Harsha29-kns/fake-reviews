@@ -2,6 +2,10 @@ services:
   - type: web
     name: fake-reviews-detection
     env: python
-    buildCommand: ""
+    buildCommand: |
+      apt-get update && \
+      apt-get install -y build-essential gfortran libatlas-base-dev && \
+      pip install --upgrade pip && \
+      pip install -r requirements.txt
     startCommand: "gunicorn app:app"
     plan: free
