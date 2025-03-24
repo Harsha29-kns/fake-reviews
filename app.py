@@ -1,3 +1,4 @@
+import os
 import numpy as np
 from flask import Flask, request, render_template, redirect, url_for, flash
 import joblib
@@ -11,7 +12,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import sys
 import time
-
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -125,7 +125,8 @@ def predict():
 
 # Run the app
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
 
 # Step 1: Load the dataset
 def load_review_data(file_path):
