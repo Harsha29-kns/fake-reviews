@@ -45,7 +45,13 @@ try:
 except Exception as e:
     logging.error(f"Error loading model/vectorizer: {e}")
     raise
+@app.route('/robots.txt')
+def robots():
+    return app.send_static_file('robots.txt')
 
+@app.route('/sitemap.xml')
+def sitemap():
+    return app.send_static_file('sitemap.xml')
 # Define the home route
 @app.route('/')
 @login_required
