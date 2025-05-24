@@ -87,7 +87,9 @@ def register():
             flash('Registration successful, please log in')
             return redirect(url_for('login'))
     return render_template('register.html')
-
+    @app.route('/google<verification_code>.html')
+def google_verify():
+    return app.send_static_file('google<verification_code>.html')
 # Define the logout route
 @app.route('/logout')
 @login_required
